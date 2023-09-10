@@ -22,7 +22,7 @@ public class Lesson5 {
 	}
 }
 class FileChooserTest extends JFrame {
-	private JTextField field = new JTextField(20);
+	private JTextField field = new JTextField(5);
 	private JButton
 		btn1 = new JButton("Open"),
 		btn2 = new JButton("Save");
