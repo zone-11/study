@@ -21,12 +21,12 @@ public class Lesson5 {
 		Tools.run(new FileChooserTest());
 	}
 }
+
 class FileChooserTest extends JFrame {
 	private JTextField field = new JTextField(3);
 
-	private JButton
-		btn1 = new JButton("Open"),
-		btn2 = new JButton("Save");
+	private JButton btn1 = new JButton("Open"), btn2 = new JButton("Save");
+
 	public FileChooserTest() {
 		field.setEditable(false);
 		setLayout(new FlowLayout());
@@ -36,9 +36,8 @@ class FileChooserTest extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				JFileChooser fileChooser = new JFileChooser();
 				int i = fileChooser.showOpenDialog(FileChooserTest.this);
-				if(i == JFileChooser.APPROVE_OPTION) {
-					field.setText(fileChooser.getSelectedFile()
-							.getName());
+				if (i == JFileChooser.APPROVE_OPTION) {
+					field.setText(fileChooser.getSelectedFile().getName());
 				}
 			}
 		});
@@ -91,16 +90,13 @@ class MessageBoxes extends JFrame {
 		setLayout(new FlowLayout());
 		alertButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, 
-						"Hellow this is alert", "some",
-						JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Hellow this is alert",
+								"some", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 		confirmButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int i = JOptionPane.showConfirmDialog(null, 
-						"or no", "choose yes",
-						JOptionPane.YES_NO_OPTION);
+				int i = JOptionPane.showConfirmDialog(null, "or no", "choose yes", JOptionPane.YES_NO_OPTION);
 				System.out.println(i);
 			}
 		});
